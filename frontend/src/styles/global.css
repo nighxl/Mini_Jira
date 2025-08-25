@@ -11,7 +11,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* ✅ ensure it stays visible */
 }
+
 
 nav a {
   color: white;
@@ -25,4 +29,50 @@ nav a:hover {
 
 button {
   cursor: pointer;
+}
+
+.admin-nav {
+  background-color: darkred; /* admin navbar */
+}
+
+/* Navbar for users */
+.user-nav {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+}
+
+/* Navbar for admins */
+.admin-nav {
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+}
+
+/* Default button */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* User buttons (blue theme) */
+.user-theme .btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.user-theme .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Admin buttons (red theme) */
+.admin-theme .btn {
+  background-color: darkred;
+  color: white;
+}
+
+.admin-theme .btn:hover {
+  background-color: firebrick;
 }
